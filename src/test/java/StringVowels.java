@@ -22,13 +22,13 @@ public class StringVowels {
     }
 
     private boolean isLengthMoreThan30Percentage(String string) {
-        int count = 1;
+        int countTheSameVowelOfSuccessful = 1;
         for (int i = 0; i < string.length(); i++) {
             if(isVowel(string.charAt(i)) && string.charAt(i) == string.charAt(i+1)){
-                count++;
+                countTheSameVowelOfSuccessful++;
             }
         }
-        return count > string.length()*0.3? true:false;
+        return countTheSameVowelOfSuccessful > string.length()*0.3? true:false;
     }
 
     private boolean isVowel(char c) {
