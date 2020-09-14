@@ -7,20 +7,34 @@ public class StringVowels {
         if (string.length() == 0){
             return "null";
         }
-        Pattern patternOfVowelsInSuccession = Pattern.compile("[aeiouAEIOU]+");
-        Matcher matcherOfVowelsInSuccession = patternOfVowelsInSuccession.matcher(string);
-        if ( !string.matches(String.valueOf(patternOfVowelsInSuccession))){
-            return string;
-        }
-        List<Integer> numberOfQualifyingStringsLength = null;
-        if(string.matches(String.valueOf(patternOfVowelsInSuccession))) {
-            int numberOfQualifyingStrings = matcherOfVowelsInSuccession.groupCount();
-            for (int i = 0; i < numberOfQualifyingStrings; i++) {
-                int tempNumberOfQualifyingStringsLength = matcherOfVowelsInSuccession.start(i)-matcherOfVowelsInSuccession.end(i);
-                numberOfQualifyingStringsLength.add(tempNumberOfQualifyingStringsLength);
-            }
-        };
 
-        return null;
+        StringBuffer stringBuffer = new StringBuffer(string);
+
+        for (int i = 0; i < string.length(); i++) {
+            if(isVowel(string.charAt(i)) && string.charAt(i) == string.charAt(i+1) &&isLengthMoreThan30Percentage(string)){
+                stringBuffer.insert(i+1,"mommy");
+            }
+
+        }
+
+
+        return stringBuffer.toString();
+    }
+
+    private boolean isLengthMoreThan30Percentage(String string) {
+        int count = 1;
+        for (int i = 0; i < string.length(); i++) {
+            if(isVowel(string.charAt(i)) && string.charAt(i) == string.charAt(i+1)){
+                count++;
+            }
+        }
+        return count > string.length()*0.3? true:false;
+    }
+
+    private boolean isVowel(char c) {
+        if(c == 'a' || c == 'e'||c == 'i' || c == 'o'|| c == 'u'){
+            return true;
+        }
+        return false;
     }
 }
