@@ -39,7 +39,7 @@ public class MommifierTest {
 
 
     @Test
-    void should_return_itself_when_string_contains_vowels_continuously_lenght_more_percentage30(){
+    void should_return_itself_when_string_contains_vowels_continuously_length_more_percentage30(){
         //given
         StringVowels stringVowels = new StringVowels();
         String stringIs = "keep";
@@ -48,16 +48,16 @@ public class MommifierTest {
         //Then
         assertEquals("kemommyep",result);
     }
-//
-//    @Test
-//    void should_return_itself_when_string_contains_vowels_continuously_lenght_less_percentage30(){
-//        //given
-//        StringVowels stringVowels = new StringVowels();
-//        String stringIs = "keeptest";
-//        //when
-//        String result = stringVowels.insertString(stringIs);
-//        //Then
-//        assertEquals("keeptest",result);
-//    }
+
+    @Test
+    void should_return_itself_when_string_contains_vowels_continuously_lenght_less_percentage30(){
+        //given
+        StringVowels stringVowels = new StringVowels();
+        String stringIs = "keeptest";
+        //when
+        String result = stringVowels.insertString(stringIs);
+        //Then
+        assertEquals("keeptest",result);
+    }
 
 }
