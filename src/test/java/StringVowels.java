@@ -9,13 +9,34 @@ public class StringVowels {
         }
 
         StringBuffer stringBuffer = new StringBuffer(string);
+        String stringBuffertemp = string;
+        Boolean flag = true;
 
-        for (int i = 0; i < string.length(); i++) {
-            if(isVowel(string.charAt(i)) && string.charAt(i) == string.charAt(i+1) &&isLengthMoreThan30Percentage(string)){
-                stringBuffer.insert(i+1,"mommy");
+        while (flag){
+            for (int i = 0; i < string.length(); i++) {
+                if(isVowel(string.charAt(i)) && string.charAt(i) == string.charAt(i+1) &&isLengthMoreThan30Percentage(string)){
+                    stringBuffer.insert(i+1,"mommy");
+                    stringBuffertemp = stringBuffertemp.substring(0, i) + stringBuffertemp.substring(i + 1);
+                }
+
+            }
+            for (int i = 1; i < stringBuffertemp.length()-1; i++) {
+                if (isVowel(stringBuffertemp.charAt(i)) && stringBuffertemp.charAt(i) == stringBuffertemp.charAt(i+1) &&isLengthMoreThan30Percentage(stringBuffertemp)){
+                    flag = true;
+                }
+
+                flag = false;
             }
 
         }
+//        for (int i = 0; i < string.length(); i++) {
+//            if(isVowel(string.charAt(i)) && string.charAt(i) == string.charAt(i+1) &&isLengthMoreThan30Percentage(string)){
+//                stringBuffer.insert(i+1,"mommy");
+//            }
+//
+//        }
+
+
 
 
         return stringBuffer.toString();
