@@ -26,18 +26,18 @@ public class MommifierTest {
         assertEquals("qqst",result);
     }
 
-//    @Test
-//    void should_return_itself_when_string_contains_vowels_not_continuously(){
-//        //given
-//        StringVowels stringVowels = new StringVowels();
-//        String stringIs = "testatest";
-//        //when
-//        String result = stringVowels.insertString(stringIs);
-//        //Then
-//        assertEquals("testatest",result);
-//    }
-//
-//
+    @Test
+    void should_return_itself_when_string_contains_vowels_not_continuously(){
+        //given
+        StringVowels stringVowels = new StringVowels();
+        String stringIs = "testatest";
+        //when
+        String result = stringVowels.insertString(stringIs);
+        //Then
+        assertEquals("testatest",result);
+    }
+
+
 //    @Test
 //    void should_return_itself_when_string_contains_vowels_continuously_lenght_more_percentage30(){
 //        //given
