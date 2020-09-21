@@ -15,17 +15,17 @@ public class MommifierTest {
 
     }
 
-//    @Test
-//    void should_return_itself_when_string_not_contains_vowels(){
-//        //given
-//        StringVowels stringVowels = new StringVowels();
-//        String stringIs = "qqst";
-//        //when
-//        String result = stringVowels.insertString(stringIs);
-//        //Then
-//        assertEquals("qqst",result);
-//    }
-//
+    @Test
+    void should_return_itself_when_string_not_contains_vowels(){
+        //given
+        StringVowels stringVowels = new StringVowels();
+        String stringIs = "qqst";
+        //when
+        String result = stringVowels.insertString(stringIs);
+        //Then
+        assertEquals("qqst",result);
+    }
+
 //    @Test
 //    void should_return_itself_when_string_contains_vowels_not_continuously(){
 //        //given
